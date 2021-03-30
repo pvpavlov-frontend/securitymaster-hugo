@@ -1058,7 +1058,7 @@ textarea.field {
     box-sizing: border-box;
     width: 100%;
     max-width: 220px;
-    padding-bottom: 20%;
+    padding-bottom: 10%;
     overflow: hidden;
 }
 
@@ -1643,6 +1643,7 @@ In this way, we will create more problems than we solve. Therefore, here I am us
     width: 100%;
     padding: 0;
     list-style: none;
+    background: #292734;
 }
 
 .banner__services li {
