@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Main page on </title>
+    <link>https://emilyfamily.online/</link>
+    <description>Recent content in Main page on </description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language><atom:link href="https://emilyfamily.online/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://emilyfamily.online/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/about/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Contacts</title>
+      <link>https://emilyfamily.online/contacts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/contacts/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Default</title>
+      <link>https://emilyfamily.online/default/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/default/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Equipment</title>
+      <link>https://emilyfamily.online/equipment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/equipment/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Press Center</title>
+      <link>https://emilyfamily.online/press-center/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/press-center/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>https://emilyfamily.online/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Typography</title>
+      <link>https://emilyfamily.online/typography/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://emilyfamily.online/typography/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
