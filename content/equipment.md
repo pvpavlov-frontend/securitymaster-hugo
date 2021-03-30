@@ -1,0 +1,5 @@
++++
+title = "Equipment"
+layout = "equipment"
++++
+

@@ -1,0 +1,1967 @@
+/* Services classes. */
+
+.visually-hidden:not(:focus):not(:active) { /* Class for accessible hiding of elements. */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(100%);
+    clip-path: inset(100%);
+}
+
+.container {
+    box-sizing: border-box;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+
+.spacer {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.spacer--64 {
+    padding: 32px 0;
+}
+
+.spacer--48 {
+    padding: 24px 0;
+}
+
+.spacer--32 {
+    padding: 16px 0;
+}
+
+.spacer--16 {
+    padding: 8px 0;
+}
+
+.divider {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 12px;
+}
+
+.divider--full {
+    padding: 12px 0;
+}
+
+.divider__inner {
+    box-sizing: border-box;
+    width: 100%;
+    height: 1px;
+}
+
+.divider__inner--dark {
+    background-color: #3F3D49;
+}
+
+.divider__inner--grey {
+    background-color: #e5e5e5;
+}
+
+.dimensional-container {
+    padding: 12px;
+}
+
+@media(max-width: 599px) {
+    .container {
+        padding: 0 8px;
+    }
+
+    .divider {
+        padding: 8px;
+    }
+
+    .divider--full {
+        padding: 8px 0;
+    }
+
+    .dimensional-container {
+        padding: 8px;
+    }
+}
+
+
+/* Typography */
+
+.page {
+    margin: 0;
+    font-family: "Titillium Web", "Arial", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.6875em;
+    color: #4C4B51;
+}
+
+h1 {
+    margin: 0;
+    padding: 12px;
+    font-size: 3.75em;
+    font-weight: 100;
+    line-height: 1.2em;
+}
+
+h2 {
+    margin: 0;
+    padding: 12px;
+    font-size: 2.8125em;
+    font-weight: 100;
+    line-height: 1.2em;
+}
+
+h3 {
+    margin: 0;
+    padding: 12px;
+    font-size: 2.1875em;
+    font-weight: 100;
+    line-height: 1.2em;
+}
+
+h4 {
+    margin: 0;
+    padding: 12px;
+    font-size: 1.875em;
+    font-weight: 300;
+    line-height: 1.2em;
+}
+
+h5 {
+    margin: 0;
+    padding: 12px;
+    font-size: 1.375em;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.1em;
+}
+
+h6 {
+    margin: 0;
+    padding: 12px;
+    font-size: 1.125em;
+    font-weight: 600;
+    font-style: normal;
+    line-height: 1.125em;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 0px;
+}
+
+.title-line {
+    position: relative;
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+.title-line::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 12px;
+    width: 50px;
+    height: 3px;
+    background-color: #FFC600;
+}
+
+p {
+    margin: 0;
+    padding: 12px;
+}
+
+strong,
+b {
+    font-weight: bold;
+    color: #292734;
+}
+
+i,
+em {
+    font-style: italic;
+    color: #292734;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+@media (max-width: 599px) {
+    h1, h2, h3, h4, h5, h6, p {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 2.8125em;
+    }
+    
+    h2 {
+        font-size: 2.109em;
+    }
+    
+    h3 {
+        font-size: 2.109em;
+    }
+    
+    h4 {
+        font-size: 1.406em;
+    }
+    
+    h5 {
+        font-size: 1.031em;
+    }
+    
+    h6 {
+        font-size: 0.84375em;
+    }
+    
+    .title-line {
+        font-size: 14px;
+    }
+}
+
+/* Default + custom lists. */
+
+ul, ol {
+    margin: 0;
+    padding: 12px 12px 12px 1.5em;
+    line-height: 34px;
+}
+
+@media (max-width: 599px) {
+    ul, ol {
+        padding: 8px 8px 8px 1.5em;
+    }
+}
+
+.yellow-list {
+    list-style: none;
+    padding-left: 12px;
+}
+
+.yellow-list li {
+    position: relative;
+    padding-left: 16px;
+}
+
+.yellow-list li::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: 0;
+    display: block;
+    width: 5px;
+    height: 5px;
+    background-color: #FFC600;
+    border-radius: 50%;
+}
+
+.list-checkbox {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px 0;
+    font-size: 0;
+}
+
+.list-checkbox li {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    width: 50%;
+    font-size: 18px;
+    padding: 8px 15px 8px 47px;
+}
+
+@media (max-width: 319px) {
+    .list-checkbox li {
+        font-size: 16px;
+    }
+}
+
+.list-checkbox li::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background-image: url("../img/check-circle.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 599px) {
+    .list-checkbox li {
+        width: 100%;
+    }
+}
+
+.dropcards-list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+.dropcards-list li {
+    box-sizing: border-box;
+    width: 25%;
+    padding: 0 4px;
+}
+
+.dropcards-list__text::before {
+    content: "";
+    display: block;
+    float: left;
+    margin-right: 16px; 
+    width: 66px;
+    height: 66px;
+    border-radius: 50%;
+    font-weight: 400;
+}
+
+.dropcards-list li:nth-child(2n) .dropcards-list__text::before {
+    color: #FFFFFF;
+    background-color: #FFC600;
+}
+
+.dropcards-list li:nth-child(2n + 1) .dropcards-list__text::before {
+    color: #FFFFFF;
+    background-color: #292734;
+}
+
+@media (max-width: 1279px) {
+    .dropcards-list li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 599px) {
+    .dropcards-list li {
+        padding: 0;
+        width: 100%;
+    }
+}
+
+/* Buttons, links. */
+
+.button {
+    display: inline-block;
+    padding: 18px 36px;
+    padding: 1.5em 3em;
+    font-family: "Titillium Web", "Arial", sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    border: none;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, background-position 0.3s ease, background-color linear 0.3s;
+}
+
+.button--small {
+    padding: 1.5em;
+}
+
+.button:disabled,
+.button:hover:disabled,
+.button:active:disabled {
+    color: #FFFFFF;
+    background: linear-gradient(to right, #7f7d85 0%,#7f7d85 100%) no-repeat scroll right bottom / 210% 100%;
+    cursor: default;
+}
+
+.button--yellow-navy {
+    color: #292734;
+    background: linear-gradient(to right, #292734 50%,#FFC600 50%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.button--yellow-navy:hover {
+    color: #FFFFFF;
+    background-position: left bottom;
+}
+
+.button--yellow-navy:active {
+    color: #FFFFFF;
+    background: linear-gradient(to right, #100D22 0%,#100D22 100%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.button--yellow-navy:focus {
+    color: #FFFFFF;
+    background-position: left bottom;
+    box-shadow: 0 0 0 2px #292734 inset, 0 0 0 3px #FFFFFF inset;
+    outline: none;
+}
+
+.button--yellow-navy:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.button--yellow-navy:focus-visible {
+    color: #FFFFFF;
+    background-position: left bottom;
+    box-shadow: 0 0 0 2px #292734 inset, 0 0 0 3px #FFFFFF inset;
+    outline: none;
+}
+
+.button--yellow-lightnavy {
+    color: #FFFFFF;
+    background: linear-gradient(to right, #383642 50%,#FFC600 50%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.button--yellow-lightnavy:hover {
+    color: #FFFFFF;
+    background-position: left bottom;
+}
+
+.button--yellow-lightnavy:active {
+    color: #FFFFFF;
+    background: linear-gradient(to right, #100D22 0%,#100D22 100%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.button--yellow-lightnavy:focus {
+    color: #FFFFFF;
+    background-position: left bottom;
+    box-shadow: 0 0 0 1px #FFFFFF inset, 0 0 0 3px #383642 inset, 0 0 0 4px #FFFFFF inset;
+    outline: none;
+}
+
+.button--yellow-lightnavy:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.button--yellow-lightnavy:focus-visible {
+    color: #FFFFFF;
+    background-position: left bottom;
+    box-shadow: 0 0 0 1px #FFFFFF inset, 0 0 0 3px #383642 inset, 0 0 0 4px #FFFFFF inset;
+    outline: none;
+}
+
+.button--navy-yellow {
+    color: #FFFFFF;
+    background: linear-gradient(to right, #FFC600 50%,#292734 50%) no-repeat scroll right bottom / 210% 100% #FFC600;
+}
+
+.button--navy-yellow:hover {
+    color: #292734;
+    background-position: left bottom;
+}
+
+.button--navy-yellow:active {
+    color: #292734;
+    background: linear-gradient(to right, #FFA900 0%,#FFA900 100%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.button--navy-yellow:focus {
+    color: #292734;
+    background-position: left bottom;
+    box-shadow: 0 0 0 2px #FFC600 inset, 0 0 0 3px #292734 inset;
+    outline: none;
+}
+
+.button--navy-yellow:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.button--navy-yellow:focus-visible {
+    color: #292734;
+    background-position: left bottom;
+    box-shadow: 0 0 0 2px #FFC600 inset, 0 0 0 3px #292734 inset;
+    outline: none;
+}
+
+.button--white-text {
+    color: #FFFFFF;
+}
+
+.link[href] {
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.link--dark[href] {
+    color: #292734;
+}
+
+.link--white[href] {
+    color: #FFFFFF;
+}
+
+.link[href]:hover {
+    color: #FFC600;
+}
+
+.link[href]:active {
+    color: #FFA900;
+}
+
+.link--dark[href]:focus {
+    outline: 1px solid #292734;
+}
+
+.link--dark[href]:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.link--dark[href]:focus-visible {
+    outline: 1px solid #292734;
+}
+
+.link--white[href]:focus {
+    outline: 1px solid #FFFFFF;
+}
+
+.link--white[href]:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.link--white[href]:focus-visible {
+    outline: 1px solid #FFFFFF;
+}
+
+.breadcrumbs {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 6px;
+    line-height: normal;
+}
+
+.breadcrumbs li {
+    position: relative;
+    padding: 6px 18px 6px 6px;
+}
+
+.breadcrumbs li::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    box-sizing: border-box;
+    display: block;
+    border-width: 2px 2px 0 0;
+    -webkit-transform: translateY(-50%) rotate(45deg);
+    transform: translateY(-50%) rotate(45deg);
+    width: 7px;
+    height: 7px;
+    border: solid #FFC600;
+    border-width: 2px 2px 0 0;
+}
+
+.breadcrumbs li:nth-last-child(1)::after {
+    content: none;
+}
+
+.breadcrumbs__link {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 1px;
+}
+
+.tags li {
+    display: inline-block;
+    padding: 1px;
+}
+
+.tag[href] {
+    display: block;
+    box-sizing: border-box;
+    padding: 6px 10px;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 2px;
+    line-height: 18px;
+    color: #FFFFFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    background: linear-gradient(to right, #FFC600 50%,#3F3D49 50%) no-repeat scroll right bottom / 210% 100% #313131;
+    cursor: pointer;
+    transition: color 0.3s ease, border-color 0.3s ease, background-position 0.3s ease, background-color linear 0.3s;
+}
+
+.tag[href]:hover {
+    color: #201e28;
+    background-position: left bottom;
+}
+
+.tag[href]:active {
+    color: #292734;
+    background: linear-gradient(to right, #FFA900 0%,#FFA900 100%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.tag[href]:focus {
+    color: #292734;
+    background-position: left bottom;
+    box-shadow: 0 0 0 2px #FFC600 inset, 0 0 0 3px #292734 inset;
+    outline: none;
+}
+
+.tag[href]:focus:not(:focus-visible) {
+    box-shadow: none;
+    outline: none;
+}
+
+.tag[href]:focus-visible {
+    color: #292734;
+    background-position: left bottom;
+    box-shadow: 0 0 0 2px #FFC600 inset, 0 0 0 3px #292734 inset;
+    outline: none;
+}
+
+/* Form fields. */
+
+.field {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 18px;
+    color: #4C4B51;
+    border: 2px solid transparent;
+    background-color: #f3f3f4;
+    font-family: "Titillium Web", "Arial", sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    font-style: normal;
+    line-height: 1.2em;
+}
+
+.field:focus {
+    color: #292734;
+    border-color: #FFC600;
+    background-color: #fafafa;
+    outline: none;
+}
+
+textarea.field {
+    height: 225px;
+    resize: none;
+}
+
+.subsribe__field-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 275px; /* Не самое удачное решение. Позже пересмотреть. */
+    min-height: 60px;
+}
+
+.subsribe__field-container > * {
+    display: inline-block;
+}
+
+.subsribe__field {
+    flex-grow: 1;
+    width: 175px;
+    height: 60px;
+    padding: 14px 18px;
+    box-sizing: border-box;
+    font-size: 13px;
+    color: #292734;
+    background-color: #ffffff;
+    border: 2px solid transparent;
+}
+
+.subsribe__field:focus {
+    border-color: #FFC600;
+    outline: none;
+}
+
+.subsribe__submit {
+    flex-grow: 1;
+}
+
+/* Cards. */
+
+/* Light card. */
+
+.light-card {
+    max-width: 370px;
+    flex-grow: 1;
+    display: flex;
+    margin-right: 30px;
+}
+
+.light-card:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.light-card__link {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-decoration: none;
+    color: #4C4B51;
+    background-color: #FFFFFF;
+    transition: background-color 0.3s ease;
+}
+
+.light-card__image {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.2%;
+}
+
+.light-card__image img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.light-card__image-mask {
+    z-index: 1;
+    opacity: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(41,39,52,0.7);
+    transition: opacity 0.3s ease;
+}
+
+.light-card__image-dots,
+.light-card__image-dots::before,
+.light-card__image-dots::after {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #FFC600;
+    transform: translateX(-50%) translateY(-50%);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-transition: opacity, margin-left ease 0.3s;
+    -moz-transition: opacity, margin-left ease 0.3s;
+    -ms-transition: opacity, margin-left ease 0.3s;
+    -o-transition: opacity, margin-left ease 0.3s;
+    transition: opacity, margin-left ease 0.3s;
+    opacity: 0;
+}
+
+.light-card__image-dots::before,
+.light-card__image-dots::after {
+    content: "";
+}
+
+.light-card__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 33px;
+}
+
+.light-card__content h3 {
+    font-size: 1.875em;
+    font-weight: 300;
+    line-height: 1.2em;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 600px) {
+    .light-card__content h3 {
+        font-size: 1.406em;
+    } 
+}
+
+.light-card__button-container {
+    margin-top: auto;
+}
+
+.light-card__link:hover {
+    background-color: #292734;
+}
+
+.light-card__link:hover h3 {
+    color: #FFC600;
+}
+
+.light-card__link:hover p {
+    color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+.light-card__link:hover .button--navy-yellow {
+    color: #292734;
+    background-position: left bottom;
+}
+
+.light-card__link:hover .light-card__image-mask {
+    opacity: 1;
+}
+
+.light-card__link:hover .light-card__image-dots,
+.light-card__link:hover .light-card__image-dots::before,
+.light-card__link:hover .light-card__image-dots::after {
+    opacity: 1;
+}
+
+.light-card__link:hover .light-card__image-dots::before {
+    margin-left: -13px;
+}
+
+.light-card__link:hover .light-card__image-dots::after {
+    margin-left: 13px;
+}
+
+.light-card__link:active h3 {
+    color: #FFA900;
+}
+
+.light-card__link:active .button--navy-yellow {
+    color: #292734;
+    background: linear-gradient(to right, #FFA900 0%,#FFA900 100%) no-repeat scroll right bottom / 210% 100%;
+}
+
+.light-card__link:focus {
+    background-color: #292734;
+    outline: 2px solid #FFC600;
+}
+
+.light-card__link:focus h3 {
+    color: #FFC600;
+}
+
+.light-card__link:focus p {
+    color: #FFFFFF;
+}
+
+.light-card__link:focus .button--navy-yellow {
+    color: #292734;
+    background-position: left bottom;
+}
+
+.light-card__link:focus .light-card__image-mask {
+    opacity: 1;
+}
+
+.light-card__link:focus .light-card__image-dots,
+.light-card__link:focus .light-card__image-dots::before,
+.light-card__link:focus .light-card__image-dots::after {
+    opacity: 1;
+}
+
+.light-card__link:focus .light-card__image-dots::before {
+    margin-left: -13px;
+}
+
+.light-card__link:focus .light-card__image-dots::after {
+    margin-left: 13px;
+}
+
+.light-card__link:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.light-card__link:focus:not(:focus-visible) h3{
+    color: #FFA900;
+}
+
+.light-card__link:focus-visible {
+    background-color: #292734;
+    outline: 2px solid #FFC600;
+}
+
+.light-card__link:focus-visible h3 {
+    color: #FFC600;
+}
+
+.light-card__link:focus-visible p {
+    color: #FFFFFF;
+}
+
+.light-card__link:focus-visible .button--navy-yellow {
+    color: #292734;
+    background-position: left bottom;
+}
+
+.light-card__link:focus-visible .light-card__image-mask {
+    opacity: 1;
+}
+
+.light-card__link:focus-visible .light-card__image-dots,
+.light-card__link:focus-visible .light-card__image-dots::before,
+.light-card__link:focus-visible .light-card__image-dots::after {
+    opacity: 1;
+}
+
+.light-card__link:focus-visible .light-card__image-dots::before {
+    margin-left: -13px;
+}
+
+.light-card__link:focus-visible .light-card__image-dots::after {
+    margin-left: 13px;
+}
+
+/* Dark card. */
+
+.dark-card {
+    border-right: 1px solid #383642;
+    border-bottom: 1px solid #383642;
+    box-sizing: border-box;
+}
+
+.dark-card__link {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 48px 26px 36px;
+    background-color: #292734;
+    text-decoration: none;
+}
+
+@media (max-width: 1279px) {
+    .dark-card__link {
+        padding: 30px 21px 18px;
+    }
+}
+
+@media (max-width: 599px) {
+    .dark-card__link {
+        justify-content: center;
+        padding: 26px 21px 18px;
+    }
+}
+
+.dark-card__link:hover .dark-card__title {
+    color: #FFC600;
+}
+
+.dark-card__link:active .dark-card__title {
+    color: #FFA900;
+}
+
+.dark-card__link:focus {
+    outline: 2px solid #FFC600;
+    outline-offset: -2px;
+}
+
+.dark-card__link:focus .dark-card__title {
+    color: #FFC600;
+}
+
+.dark-card__link:focus:not(:focus-visible) {
+    outline: none;
+}
+
+.dark-card__link:focus:not(:focus-visible) .dark-card__title {
+    color: #FFA900;
+}
+
+.dark-card__link:focus-visible {
+    outline: 2px solid #FFC600;
+    outline-offset: -2px;
+}
+
+.dark-card__link:focus-visible .dark-card__title {
+    color: #FFC600;
+}
+
+.dark-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dark-card__img {
+    padding: 12px;
+}
+
+.dark-card__img-inner {
+    width: 54px;
+    padding-bottom: 54px;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+}
+
+.dark-card__title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FFFFFF;
+    flex-grow: 1;
+    transition: color 0.3s ease;
+}
+
+@media (max-width: 599px) {
+    .dark-card__title {
+        flex-grow: 0;
+    }
+}
+
+
+@media (max-width: 319px) {
+    .dark-card__title {
+        font-size: 16px;
+    }
+}
+
+.dark-card__text {
+    color: #FFFFFF;
+}
+
+@media (max-width: 319px) {
+    .dark-card__text {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 599px) {
+    .dark-card__img {
+        padding: 8px;
+    }
+}
+
+/* Equipment card. */
+
+.equipment-card__image {
+    padding: 12px;
+}
+
+.equipment-card__image-inner {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 20%;
+    overflow: hidden;
+}
+
+.equipment-card__image-inner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Shop card. */
+
+.shop-card__inner {
+    display: flex;
+}
+
+.shop-card__image {
+    padding: 12px;
+}
+
+.shop-card__image-inner {
+    position: relative;
+    box-sizing: border-box;
+    width: 251px;
+    padding-bottom: 100%;
+    background-color: #fafafa;
+    border: 1px solid #DDDDDD;
+    overflow: hidden;
+}
+
+.shop-card__image-inner img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: scale, 0.5s ease ;
+}
+
+.shop-card__image-inner img:hover {
+    transform: scale(1.1);
+}
+
+.shop-card__content {
+    display: flex;
+    flex-direction: column;
+}
+
+.shop-card__buttons-container {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+}
+
+/* header */
+
+/* 
+We can arrange all menu items in one row using float, but they will be nailed to the left. Last element have to be a "clearfix".
+You can also try to make a grid using inline and nail the elements to different sides (set for .header__container "text-align: right", and set for logo "position: absolute" and "left: 0"), but there are several problems:
+- it will not be possible to set vertical indents to elements, because they have an inline model;
+- internal elements cannot have a block model;
+- if the screen becomes too narrow, the elements will overlap the logo;
+
+In this way, we will create more problems than we solve. Therefore, here I am using float property.
+*/
+
+/* containers */
+
+.header__container {
+    padding: 8px 12px; /* must be equal to .main-menu__link padding */
+}
+
+/* logo */
+
+.header__logo {
+    float: left;
+}
+
+.main-menu {
+    margin: 0;
+}
+
+.logo a {
+    display: block;
+    padding: 8px 12px;
+}
+
+.logo a img {
+    display: block; /* normalize geometry img inside a */
+}
+
+/* main-menu */
+
+.header__dropdown-container {
+    margin-top: 8px; /* We set a margin-top to align the menu in the center - for this you need to know the size of the largest element in advance. We have logo, so  can afford it. */
+    float: right;
+}
+
+.burger {
+    display: none;
+}
+
+.header__main-menu-container {
+    float: left;
+}
+
+.header__phone-block {
+    float: left;
+}
+
+.header__phone-block a{
+    display: block;
+    float: left;
+    padding: 8px 12px;
+}
+
+.header__phone-block a {
+    display: inline-block;
+}
+
+.header__cta {
+    float: left;
+}
+
+.main-menu {
+    padding: 8px 0px; /* We make top/bottom padding, because lists items is inline, and there don't work vertical padding, only horizontal: https://developer.mozilla.org/en-US/docs/Web/CSS/padding-inline */
+}
+
+.main-menu__item {
+    padding: 0px 12px;
+    display: inline;
+}
+
+/* cta */
+
+.cta {
+    padding: 0 12px;
+}
+
+.cta a {
+    display: block;
+    text-align: center;
+}
+
+.clearfix {
+    /* To cancel the float action, the clear property must be added to the element that follows the float element. */
+    display: table;
+    clear: both;
+}
+
+/* main content */
+
+.main__container {
+    padding: 8px 12px;
+}
+
+.header__container {
+    max-width: none; /* Since IE 7, the max-width property works. */
+}
+
+.main-menu {
+    list-style: none;
+}
+
+/*
+  Starting from IE 9, media queries works. This means that we can make a mobile version for the menu.
+*/
+
+.header__container {
+    position: relative;
+    background-color: #ffffff; /* Problem for IE 5. */
+}
+
+.burger {
+    display: none;
+}
+
+@media (max-width: 1279px) {
+    .header__logo {
+        float: none;
+    }
+
+    .header__dropdown-container {
+        margin: 0;
+        float: none;
+    }
+
+    .main-menu__item {
+        display: block;
+    }
+
+    .header__phone-block {
+        float: none;
+    }
+
+    .header__phone-block a {
+        float: none;
+        padding: 12px;
+    }
+
+    .header__cta {
+        padding: 12px;
+    }
+
+    .header__cta {
+        float: none;
+    }
+
+    .header__main-menu-container {
+        margin: 0;
+        float: none;
+    }
+
+    .js .burger {
+        position: absolute;
+        top: 21px;
+        left: 8px;
+        display: block;
+        padding: 8px;
+    }
+
+    .js .burger button {
+        display: block;
+        width: 42px;
+        height: 32px;
+        padding: 8px;
+        border: 0;
+        background-color: transparent;
+    }
+
+    .js .header__dropdown-container {
+        display: none;
+    }
+
+    .js .header__dropdown-container--opened {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: block;
+        width: 100%;
+        background-color: #ffffff;
+        box-shadow: 0px 10px 10px rgb(49, 49, 49, 40%);
+    }
+}
+
+@media(max-width: 599px) {
+    .header__container {
+        padding: 8px;
+    } 
+
+    .logo a {
+        padding: 8px;
+    }
+}
+
+/*
+    Since IE 11, flex works (without prefixes). Now it is easier for us to line up and center the elements in the container and do not need to artificially control the height of the header.
+*/
+@supports (display: flex) {
+    .header {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__container {
+        width: 100%;
+    }
+
+    .clearfix {
+        display: none;
+    }
+
+    .header__container {
+        display: flex;
+        align-items: center;
+    }
+
+    .header__logo {
+        margin-right: auto;
+    }
+
+    .header__dropdown-container {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-menu {
+        padding: 0;
+        display: flex;
+    }
+
+    .main-menu__item {
+        display: block;
+        padding: 0;
+    }
+
+    .main-menu__link {
+        display: block;
+        padding: 8px 12px;
+    }
+
+    @media (max-width: 1279px) {
+        .header__container {
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+        .header__dropdown-container {
+            width: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .burger {
+            display: none;
+        }
+
+        .js .burger {
+            position: relative;
+            top: 0;
+            left: 0;
+            display: block;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .main-menu {
+            flex-direction: column;   
+        }
+
+        .cta {
+            display: flex;
+        }
+
+        .cta a {
+            display: inline-block;
+        }
+    }
+
+    @media (max-width: 599px) {
+        .main-menu__link {
+            padding: 8px;
+        }
+    }
+}
+
+/* 
+    In most browsers (not IE) the "position: sticky" property works. Its advantage over "position: fixed" in that it takes place in the document and header does not overlap other elements.
+*/
+
+.scaleble-header {
+    position: -webkit-sticky; /* Safari. */
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: #ffffff;
+}
+
+.scaleble-header--shadow {
+    box-shadow: 0px 2px 10px rgb(49 49 49 / 40%);
+}
+
+.scaleble-header .header__logo {
+    flex-shrink: 0;
+    width: 315px;
+    height: 76px;
+}
+
+@media (max-width: 1279px) {
+    .scaleble-header .header__logo {
+        width: 190px;
+        height: 52px;
+    }
+
+    .scaleble-header .header__dropdown-burger {
+        position: absolute;
+        top: 50%;
+        left: auto;
+        right: 8px;
+        width: 42px;
+        height: 32px;
+        transform: translateY(-50%);
+    }
+
+    .scaleble-header .header__dropdown-burger button {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+.scaleble-header .header__logo a img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling the header */
+
+
+.header {
+    border: none;
+}
+
+.header__logo {
+    margin-right: auto;
+}
+
+.header__main-menu-container {
+    width: 100%;
+}
+
+.main-menu {
+    justify-content: space-between;
+} 
+
+.header__main-menu-container {
+    margin-right: auto;
+}
+
+.main-menu__item {
+    margin-right: auto;
+} 
+
+.main-menu__item:nth-last-child(1) {
+    margin-right: 0;
+}
+
+.main-menu__link {
+    padding-right: clamp(12px, calc(1.3vw - 4px), 30px);
+    padding-left: clamp(12px, calc(1.3vw - 4px), 30px);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1279px) {
+    .main-menu__link {
+        font-size: 16px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
+.main-menu__link--current b {
+    font-weight: inherit;
+    color: inherit;
+}
+
+.cta .button {
+    padding: 1.5em 3em;
+}
+
+.header__phone-block {
+    display: flex;
+}
+
+@media (max-width: 1279px) {
+    .header__phone-block {
+        flex-direction: column;
+    }
+}
+
+.header__phone-block a {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.header__phone-block a::before {
+    content: "";
+    width: 19px;
+    height: 21px;
+    margin-right: 8px;
+    background-image: url("../img/icon-phone-2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* Fix for dropdown menu: if devices screen is too small, and we have a sticky header, there will be no way to scroll through the menu. Therefore, it need to add the overflow property (height we calc with js). */
+
+.sticky-header .header__dropdown-container--opened {
+    overflow-y: auto;
+}
+
+
+/* Banner */
+
+.banner__image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 600px;
+    padding-bottom: clamp(400px, 56.25%, 600px);
+    overflow: hidden;
+
+}
+
+.banner__image {
+    z-index: 1;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-image: url("../img/slide-1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.banner__content {
+    z-index: 2;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+/* @media (max-width: 1322px) {
+    .banner__content {
+        right: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+} */
+
+
+/* @media (max-width: 1279px) {
+    .banner__content {
+        right: 3.5%;
+        right: max(42px, 3.5%);
+    }
+} */
+
+@media (max-width: 599px) {
+    .banner__content {
+        right: 50%;
+        left: 50%;
+        box-sizing: border-box;
+        width: 100%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.banner__content h2 {
+    color: #FFFFFF;
+    font-size: 79px;
+    font-size: min(6.5vw, 79px);
+    font-weight: 300;
+}
+
+@media (max-width: 1279px) {
+    .banner__content h2 {
+        font-size: clamp(24px, 6.5vw, 79px);
+    }
+}
+
+.banner__lead {
+    font-size: 30px;
+    font-weight: 200;
+    color: #FFFFFF;
+}
+
+@media (max-width: 1279px) {
+    .banner__lead {
+        font-size: min(4vw, 30px);
+        font-size: clamp(16px, 4vw, 24px);
+    }
+}
+
+@media (max-width: 599px) {
+    .banner__lead {
+        color: #FFFFFF;
+    }
+}
+
+.banner__services {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.banner__services li {
+    display: flex;
+    width: 25%;
+}
+
+.banner__services li > * {
+    /* width: 100%;
+    height: 100%; */
+}
+
+.banner__service--video .dark-card__img-inner {
+    background-image: url("../img/icon-camera.png");
+}
+
+.banner__service--locksmith .dark-card__img-inner {
+    background-image: url("../img/icon-key.png");
+}
+
+.banner__service--access .dark-card__img-inner {
+    background-image: url("../img/icon-access.png");
+
+}
+.banner__service--safes .dark-card__img-inner {
+    background-image: url("../img/icon-safe.png");
+}
+
+@media (max-width: 1279px) {
+    .banner__services li {
+        width: 50%;
+    }
+}
+
+@media (max-width: 599px) {
+    .banner__services li {
+        width: 100%;
+    }
+}
+
+.customers__inner {
+    background-color: #fafafa;
+}
+
+.customer__cards {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0 12px;
+}
+
+.customer__card {
+    margin-right: 30px;
+}
+
+.customer__card:nth-last-child(1) {
+    margin-right: 0;
+}
+
+@media (max-width: 1279px) {
+    .customer__cards {
+        flex-direction: column;
+    }
+
+    .customer__card {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+
+    .customer__card:nth-last-child(1) {
+        margin: 0 auto;
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 599px) {
+    .customer__cards {
+        padding: 0 8px;
+    }
+}
+
+.four-steps__title {
+    text-align: center;
+}
+
+.footer__inner {
+    background-color: #292734;
+    color: #a6a6a6;
+}
+
+.footer__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__container > * {
+    width: 25%;
+    flex-shrink: 1;
+}
+
+.footer__container .footer__spacer {
+    width: 100%;
+}
+
+.footer__container .footer__spacer--tablet {
+    display: none;
+}
+
+@media (max-width: 1279px) {
+    .footer__container > .footer__spacer--tablet {
+        display: block;
+    }
+}
+
+.footer__container .footer__spacer--mobile {
+    display: none;
+}
+
+@media (max-width: 599px) {
+    .footer__container > .footer__spacer--mobile {
+        display: block;
+    }
+    
+}
+
+.footer__inner a,
+.footer__inner h3 {
+    color: #FFFFFF;
+}
+
+.footer__inner h3 {
+    font-size: 1.125em;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.1em;
+}
+
+.footer__contact-links {
+    font-style: normal;
+}
+
+.footer__contact-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.footer__contact-link::before {
+    content: "";
+    display: inline-block;
+    margin-right: 8px;
+    width: 32px;
+    height: 32px;
+    background-size: auto 16px ;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__contact-link--address::before {
+    background-image: url("../img/icon-house.png");
+}
+
+.footer__contact-link--mail::before {
+    background-image: url("../img/icon-message.png");
+}
+
+.footer__contact-link--phone::before {
+    background-image: url("../img/icon-phone.png");
+}
+
+.footer__social-links {
+    padding: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+}
+
+.footer__social-links li {
+    display: inline-block;
+}
+
+.footer__social-link {
+    display: block;
+    width: 16px;
+    height: 16px;
+    padding: 8px;
+    background-size: auto 16px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.footer__social-link--facebook {
+    background-image: url("../img/icon-facebook.png");
+}
+
+.footer__social-link--instagram {
+    background-image: url("../img/icon-instagram.png");
+}
+
+.footer__social-link--tumbler {
+    background-image: url("../img/icon-tumbler.png");
+}
+
+.footer__social-link--twitter {
+    background-image: url("../img/icon-twitter.png");
+}
+
+.footer__social-link--dribble {
+    background-image: url("../img/icon-dribble.png");
+}
+
+.footer__navigation-links {
+    list-style: none;
+    padding: 12px;
+}
+
+.footer__navigation-link {
+    display: block;
+    width: 100%;
+    font-weight: 200;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 1279px) {
+    .footer__container > * {
+        width: 50%;
+    }
+}
+
+
+@media (max-width: 599px) {
+    .footer__container > * {
+        width: 100%;
+    }
+}
+
+.footer__copyright {
+    box-sizing: border-box;
+    width: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+/* About company */
+
+.page__layout-container {
+    display: flex;
+}
+
+.page__layout-container .page__main {
+    box-sizing: border-box;
+    width: 66.66%;
+}
+
+
+.page__layout-container .page__aside {
+    box-sizing: border-box;
+    width: 33.33%;
+    padding: 12px;
+}
+
+@media(max-width: 599px) {
+    .page__layout-container {
+        flex-direction: column;
+    }
+
+    .page__layout-container .page__main,
+    .page__layout-container .page__aside {
+        width: 100%;
+    }
+}
+
+.aside--sticky {
+    position: sticky;
+}
+
+.aside__inner {
+    width: 100%;
+    background-color: #292734;
+}
+
+.aside__block {
+    padding: 0 36px;
+}
+
+.aside__inner h3 {
+    padding: 12px;
+    font-size: 1.375em;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.1em;
+    color: #FFFFFF;
+}
+
+/* Contacts */
+
+.contact-form {
+    max-width: 840px;
+    margin: 0 auto;
+}
+
+.contact-form__inner {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contact-form__field-container {
+    box-sizing: border-box;
+    width: 33.3%;
+}
+
+.contact-form__field-container--full {
+    width: 100%;
+}
+
+.contact-form__field-container--centered {
+    text-align: center;
+}
+
+@media (max-width: 599px) {
+    .contact-form__field-container {
+        width: 100%;
+    }
+}

@@ -1,0 +1,4 @@
+theme = "security-master"
+baseURL = "https://emilyfamily.online/"
+languageCode = "en-US"
+paginate = 5
